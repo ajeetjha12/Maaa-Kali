@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>जय मां रामेश्वरी काली - मंदिर</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', 'Arial', sans-serif; 
+        }
+
+        body {
+            background-color: #000000;
+            color: #FFD700;
+            text-align: center;
+            line-height: 1.6;
+            box-shadow: inset 0 0 50px rgba(139, 0, 0, 0.5), inset 0 0 30px rgba(255, 215, 0, 0.3);
+        }
+
+        /* हेडर (शीर्ष भाग) */
+        header {
+            background-color: #8B0000;
+            padding-bottom: 20px;
+            border-bottom: 8px solid #FFD700; 
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.8);
+        }
+
+        .header-image {
+            width: 100%;
+            height: 450px;
+            object-fit: cover; 
+            display: block;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.7);
+        }
+
+        header h1 {
+            color: #FFD700; 
+            padding: 15px 0 5px 0;
+            font-size: 3.5em; 
+            text-shadow: 3px 3px #000000, 0 0 10px #FF4500; 
+        }
+
+        header .tagline {
+            color: #F0A0A0; 
+            font-size: 1.3em;
+        }
+
+        /* माँ काली का मंत्र */
+        .mantra {
+            background-color: #333333; 
+            color: #FFFFFF; 
+            padding: 20px 10px;
+            margin: 0;
+            border-top: 5px solid #FFD700;
+            border-bottom: 5px solid #FFD700;
+        }
+
+        .mantra p {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #FF4500; 
+        }
+        
+        /* **वीडियो दर्शन सेक्शन स्टाइलिंग (अब छोटा और आकर्षक)** */
+        #video-darshan-section {
+            padding: 40px 20px;
+            background-color: #0d0d0d;
+            margin: 30px 0;
+            border-top: 5px solid #FF4500;
+            border-bottom: 5px solid #FF4500;
+            box-shadow: 0 0 20px rgba(139, 0, 0, 0.7);
+        }
+
+        #video-darshan-section h2 {
+            color: #FFD700;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-shadow: 0 0 10px #FF4500;
+        }
+
+        .video-container {
+            /* निश्चित ऊँचाई (लगभग 400px) सेट करें */
+            height: 400px; 
+            width: auto;
+            max-width: 450px; /* अधिकतम चौड़ाई सीमित करें */
+            margin: 0 auto;
+            position: relative;
+            
+            /* कंटेनर के अंदर वीडियो को 9:16 में फिट करने के लिए */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            border: 5px solid #FFD700;
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.9), 0 0 15px rgba(255, 69, 0, 0.8);
+            background-color: #000;
+            overflow: hidden; /* वीडियो फ्रेम के बाहर न जाए */
+        }
+
+        .darshan-video {
+            /* 9:16 अनुपात को बनाए रखने के लिए */
+            height: 100%; /* कंटेनर की पूरी ऊँचाई लें */
+            width: auto; /* चौड़ाई को अनुपात के हिसाब से एडजस्ट करें */
+            object-fit: cover;
+            display: block;
+        }
+        
+        @media (max-width: 768px) {
+            .video-container {
+                height: 350px; /* मोबाइल पर थोड़ा छोटा करें */
+            }
+        }
+        /* **वीडियो दर्शन सेक्शन स्टाइलिंग समाप्त** */
+
+        /* आकर्षक सोशल मीडिया सेक्शन स्टाइलिंग */
+        #social-join {
+            padding: 40px 20px;
+            background-color: #1a1a1a; 
+            border-top: 4px double #FFD700; 
+            border-bottom: 4px double #FFD700;
+            margin-top: 30px;
+        }
+
+        #social-join h2 {
+            color: #FFD700;
+            font-size: 2em;
+            margin-bottom: 30px;
+            text-shadow: 0 0 10px #FF4500; 
+            border-bottom: 3px solid #8B0000;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 40px; 
+            flex-wrap: wrap; 
+        }
+
+        .cool-button {
+            display: inline-block;
+            padding: 18px 35px; 
+            color: #000000; 
+            text-decoration: none; 
+            font-size: 1.4em; 
+            font-weight: 900; 
+            letter-spacing: 1px;
+            border-radius: 8px;
+            
+            /* 3D इफ़ेक्ट और सुनहरी चमक */
+            box-shadow: 0 4px 0 0 #8B0000, 
+                        0 0 20px rgba(255, 215, 0, 0.9); 
+            
+            transition: all 0.2s ease-in-out;
+        }
+
+        /* Instagram बटन */
+        .cool-button.instagram {
+            background: linear-gradient(135deg, #FFD700, #FF4500); 
+            border: 1px solid #FFD700;
+        }
+
+        /* Facebook बटन */
+        .cool-button.facebook {
+            background: linear-gradient(135deg, #FF4500, #FFD700);
+            border: 1px solid #FFD700;
+        }
+
+
+        /* माउस ओवर पर (COOL HOVER EFFECT) */
+        .cool-button:hover {
+            color: #FFFFFF; 
+            transform: translateY(-4px) scale(1.05); 
+            
+            /* चमकदार शैडो */
+            box-shadow: 0 8px 0 0 #8B0000, 
+                        0 0 30px #FFD700, 
+                        0 0 15px #FF4500; 
+        }
+        
+        /* UPCOMING POOJA सेक्शन स्टाइलिंग */
+        #upcoming-pooja {
+            padding: 40px 20px;
+            background-color: #0d0d0d; 
+            border-top: 5px solid #8B0000; 
+            border-bottom: 5px solid #8B0000;
+            margin-top: 30px;
+        }
+
+        #upcoming-pooja h2 {
+            color: #FF4500; 
+            font-size: 2.2em;
+            margin-bottom: 30px;
+            text-shadow: 0 0 8px #FFD700; 
+        }
+
+        .pooja-details {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .pooja-item {
+            background-color: #333333; 
+            border: 3px solid #FFD700; 
+            padding: 20px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 450px; 
+            text-align: left;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+            transition: transform 0.3s;
+        }
+
+        .pooja-item:hover {
+            transform: translateY(-5px); 
+            box-shadow: 0 10px 20px rgba(255, 69, 0, 0.5); 
+        }
+
+        .pooja-item h3 {
+            color: #FFD700; 
+            font-size: 1.6em;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #8B0000;
+            padding-bottom: 5px;
+        }
+
+        .pooja-item p {
+            color: #FFFFFF; 
+            margin: 8px 0;
+            font-size: 1.1em;
+        }
+
+        .pooja-item strong {
+            color: #FF4500; 
+        }
+        
+        /* DONATION/PAYMENT सेक्शन स्टाइलिंग */
+        #donation-section {
+            padding: 40px 20px;
+            background-color: #1a1a1a;
+            margin-top: 40px;
+            border-top: 5px double #FFD700;
+            border-bottom: 5px double #FFD700;
+        }
+
+        #donation-section h2 {
+            color: #FFD700;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px #FF4500;
+        }
+
+        #donation-section p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .payment-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #333333;
+            padding: 30px;
+            border-radius: 15px;
+            border: 5px solid #8B0000;
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.7);
+        }
+
+        /* QR कोड कंटेनर */
+        .qr-container {
+            width: 200px;
+            height: 200px;
+            margin: 20px 0;
+            border: 5px solid #000000;
+            background-color: #FFFFFF;
+            border-radius: 5px;
+        }
+
+        .qr-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        /* UPI बटन कंटेनर */
+        .upi-button-cover {
+            margin-top: 15px;
+            display: block;
+            position: relative;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        /* UPI ID टेक्स्ट (पूरी तरह से छिपा हुआ) */
+        .upi-id {
+            display: none;
+        }
+
+        /* बटन स्टाइलिंग */
+        .upi-button {
+            display: block;
+            width: 100%;
+            padding: 15px 20px;
+            background-color: #FF4500; 
+            color: #FFFFFF;
+            font-size: 1.4em;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            border: 3px solid #FFD700;
+            box-shadow: 0 4px 0 #8B0000;
+            transition: all 0.2s;
+        }
+
+        .upi-button:hover {
+            background-color: #FFD700;
+            color: #000000;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 0 #8B0000;
+        }
+        
+        /* मुख्य सामग्री */
+        main {
+            padding: 40px 20px;
+        }
+
+        .photo-column h2 { 
+            color: #FF4500; 
+            background-color: #1a1a1a; 
+            padding: 10px 30px;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+            border: 3px solid #FFD700;
+            display: inline-block;
+            box-shadow: 0 0 15px rgba(255, 69, 0, 0.9);
+        }
+
+        /* फोटो गैलरी */
+        .photo-column {
+            max-width: 900px; 
+            margin: 0 auto; 
+            display: grid; 
+            grid-template-columns: 1fr; 
+            gap: 40px; 
+        }
+
+        .photo-column div {
+            background-color: #111111;
+            border: 3px solid #8B0000;
+            padding: 10px;
+        }
+
+        .photo-column img {
+            width: 100%; 
+            height: 400px; 
+            object-fit: cover; 
+            border: 5px solid #FFD700; 
+            box-shadow: 0 0 30px rgba(255, 69, 0, 0.8), 0 0 10px #FFD700; 
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+        }
+
+        .photo-column img:hover {
+            transform: scale(1.03); 
+            box-shadow: 0 0 40px #FFD700, 0 0 15px #FF4500; 
+        }
+
+        .photo-column p {
+            color: #000000; 
+            background-color: #FFD700; 
+            padding: 12px;
+            margin-top: 10px; 
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        /* फ़ूटर (सबसे नीचे) */
+        footer {
+            background-color: #000000; 
+            color: #FFD700; 
+            padding: 20px 0;
+            margin-top: 50px;
+            border-top: 8px solid #8B0000; 
+        }
+        
+        /* नया कूल डेवलपर क्रेडिट स्टाइल */
+        .navyuvak-credit {
+            color: #FFD700; 
+            font-size: 0.9em;
+            margin-top: 5px;
+            margin-bottom: 3px;
+            text-shadow: 0 0 5px #8B0000;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+
+        .developer-credit {
+            color: #FF4500; 
+            font-size: 0.8em;
+            margin-top: 5px;
+            font-weight: bold;
+        }
+
+        /* मोबाइल उपकरणों के लिए मीडिया क्वेरी */
+        @media (max-width: 768px) {
+            .header-image {
+                height: 300px; 
+            }
+            header h1 {
+                font-size: 2.5em;
+            }
+            .photo-column h2 {
+                font-size: 2em;
+            }
+            .pooja-item {
+                max-width: 100%;
+            }
+            .photo-column img {
+                height: 300px;
+            }
+            .mantra p {
+                font-size: 1.2em;
+            }
+            .social-buttons {
+                flex-direction: column; 
+                gap: 20px;
+            }
+            .cool-button {
+                font-size: 1.2em;
+                padding: 15px 25px;
+                min-width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="WhatsApp Image 1947-07-23 at 15.23.45.jpeg" alt="मां रामेश्वरी काली की मुख्य मूर्ति" class="header-image">
+        <h1>जय मां रामेश्वरी काली</h1>
+        <p class="tagline">श्री श्री 108 मां रामेश्वरी काली, सलहा - स्थापना वर्ष 1929</p>
+    </header>
+
+    <div class="mantra">
+        <p>ॐ जयंती मंगला काली भद्रकाली कपालिनी </p>
+        <p>दुर्गा क्षमा शिवा धात्री स्वाहा स्वधा नमोऽस्तु ते॥</p>
+    </div>
+
+    <section id="video-darshan-section">
+        <h2>मां के आंगन</h2>
+        <div class="video-container">
+            <video class="darshan-video" controls autoplay loop muted playsinline>
+                <source src="Jai maa kali.mp4" type="video/mp4">
+                आपका ब्राउज़र वीडियो टैग का समर्थन नहीं करता।
+            </video>
+        </div>
+    </section>
+    <section id="upcoming-pooja">
+        <h2>आगामी पूजा और कार्यक्रम</h2>
+        <div class="pooja-details">
+            
+            <div class="pooja-item">
+                <h3>पहला दिन</h3>
+                <p><strong>दिनांक:</strong> 19/08/2025</p>
+                <p><strong>समय:</strong> सुबह 10:00 बजे </p>
+                <p>कलश शोभा यात्रा (रविवार) </p>
+            </div>
+            
+            <div class="pooja-item">
+                <h3>दूसरा दिन</h3>
+                <p><strong>दिनांक:</strong> 20/10/2025</p>
+                <p><strong>समय:</strong> मध्य रात्रि 12:00</p>
+                <p>निशा पूजा एवं मां महाकाली पूजनोउत्सव (सोमवार)</p>
+            </div>
+
+            <div class="pooja-item">
+                <h3>तीसरा दिन</h3>
+                <p><strong>दिनांक:</strong> 21/10/2025</p>
+                <p><strong>समय:</strong> दिन में 11:00</p>
+                <p>पूजा एवं आरती(मंगलवार)</p>
+            </div>
+            
+        </div>
+    </section>
+    
+    <section id="social-join">
+        <h2>सोशल मीडिया से जुड़ें</h2>
+        <div class="social-buttons">
+            <a href="https://www.instagram.com/rameshwarikalisalha?igsh=MTl5M2d2djhqZGltZQ==" class="cool-button instagram" target="_blank">
+                📸 Instagram पेज से जुड़ें
+            </a>
+
+            <a href="https://www.facebook.com/gautam.jha.213519" class="cool-button facebook" target="_blank">
+                👍 Facebook पेज से जुड़ें
+            </a>
+        </div>
+    </section>
+
+    <section id="donation-section">
+        <h2>मंदिर के विकास हेतु सहयोग दें</h2>
+        <p>आपका छोटा सा दान भी मंदिर के रखरखाव और धार्मिक कार्यों में बड़ी मदद करेगा।</p>
+
+        <div class="payment-box">
+            <h3>UPI द्वारा दान करें</h3>
+            
+            <div class="qr-container">
+                <img src="WhatsApp Image 1947-07-23 at 16.57.49.jpeg" alt="UPI QR Code">
+            </div>
+            <p>या</p>
+            
+            <div class="upi-button-cover">
+                <a href="upi://pay?pa=7319864557@ibl&pn=Maa%20Rameshwari%20Kali%20Mandir" class="upi-button" target="_blank">
+                    🙏 क्लिक कर दान करें 🙏
+                </a>
+                
+                <div class="upi-id">
+                    7319864557@ibl
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <section id="gallery">
+            <h2 class="photo-column">मंदिर के दिव्य क्षण</h2>
+            <div class="photo-column">
+                
+                <div>
+                    <img src="WhatsApp Image 1947-07-23 at 15.27.42.jpeg" alt="मां रामेश्वरी काली का विग्रह">
+                    <p>मां रामेश्वरी काली का दिव्य विग्रह।</p>
+                </div>
+                
+                <div>
+                    <img src="Screenshot 1947-07-23 at 6.03.15 PM.jpeg" alt="श्री रामेश्वरी काली मंदिर की स्थापना पट्टिका">
+                    <p>मंदिर की स्थापना (1929) दर्शाती पट्टिका।</p>
+                </div>
+                
+                <div>
+                    <img src="WhatsApp Image 1947-07-23 at 15.23.46.jpeg" alt="रात्रि में मंदिर की रोशनी की सजावट">
+                    <p>उत्सव पर दूर से मंदिर का मनमोहक दृश्य।</p>
+                </div>
+
+                <div>
+                    <img src="WhatsApp Image 1947-07-23 at 15.23.44.jpeg" alt="मंदिर के हॉल में भक्तजन">
+                    <p>भक्तों का सामूहिक अनुष्ठान और सत्संग।</p>
+                </div>
+
+                <div>
+                    <img src="Screenshot 1947-07-23 at 6.06.20 PM.jpeg" alt="भजन-कीर्तन करते हुए पुजारी और भक्त">
+                    <p>पाठ करते हुए श्रद्धालु।</p>
+                </div>
+
+                <div>
+                    <img src="WhatsApp Image 1947-07-23 at 15.33.16.jpeg" alt="उत्सव के लिए सजा हुआ मंदिर प्रवेश द्वार">
+                    <p>भव्य प्रकाश से सुसज्जित मंदिर का मुख्य द्वार।</p>
+                </div>
+                
+                <div>
+                    <img src="WhatsApp Image 1947-07-23 at 15.23.45 copy.jpeg" alt="मंदिर में पूजा करते भक्तगण">
+                    <p>मंदिर प्रांगण में अनुष्ठान में लीन भक्त।</p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 जय मां रामेश्वरी काली. सभी अधिकार सुरक्षित।</p>
+        
+        <p class="navyuvak-credit">युवा शक्ति द्वारा समर्पित (Navyuvak Sangh Salaha)</p>
+        <p class="developer-credit">Developed by Harsh Jha</p>
+    </footer>
+
+</body>
+</html>
